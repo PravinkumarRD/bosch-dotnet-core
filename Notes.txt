@@ -270,6 +270,13 @@ For Clean Architecture -
 8) You implment this contract into Generic Repository class in which you will write the logic to perform the CURD options using some DbContext
 9) Implement/Declare DTOs - Data Transfer Objects
 10) Install AutoMapper extension for ASP.NET Core and map DTOs with Entities using Profile of AutoMapper library
+11) CQRS along with Mediator
+	Commands and Queries - 
+		Queries - Query Request and Query Handler [Repository via dependency injection/using mapper object of AutoMapper library, it will map the result of all the queries to the DTOs]
+12) Configure connection string in ASP.NET Application [MVC/WebApi/Microservice/...]
+13) Extend the IServiceCollection container by adding an extension method and call the method in ASP.NET application
+14) Configure and Add Areas [Featurewise folder structure] in ASP.NET MVC app. Also configure the link in Navbar
+15) Service registrations for AutoMapper and Mediator and call this in ASP.NET application
 
 DQL Operations - Source - Will original Entity
 
@@ -278,7 +285,10 @@ DML Operation - Source - Will DTOs
 
 
 Featurewise Folder Strcuture in ASP.NET Core MVC Application
-	
+
+Assignment -                 
+	1) Display All Categories using CQRS and Mediator Pattern by adding a new Area with the name CategoryManager in your ASP.NET MVC application
+	2) Insert New Categoryusing CQRS and Mediator Pattern in your ASP.NET MVC application
 
 
 
