@@ -291,6 +291,81 @@ Assignment -
 	2) Insert New Categoryusing CQRS and Mediator Pattern in your ASP.NET MVC application
 
 
+Step- 1
+	Add CategoryDtos folder under DTOs folder of Application/Usecase logic DLL
+	Add Two DTOs - CategoryDto [SelectAll, SelectSingle], NewCategoryDto [Insert]
+	Maping between DTOs of Category with Entity Category in Profile folder and MappingProfiles Class in Application/Usecases DLL
+	Register the CRUD opeations dependency in our Services container of Infrastructure for Category
+
+
+--------------------------
+Data caching in ASP.NET Core MVC Applications
+
+	1) In-Memory Cache
+		Each cache is identified by a unique key
+		Define Caching Options
+			Sliding Expiry = 2 Mins
+			Absolute Expiry = 60 Mins
+			
+	2) Distributed Cache [Radis]
+
+
+Configure ASP.NET Core MVC/Razor/... for Multi-Lingual Support - 
+	You will have to add globalization support in Services container of your application
+	You can use Translation in Views, Controllers and Models [Data Annotations]
+	
+	1) Index.en.resx, Index.es.resx, Index.de.resx, Index.tn.resx [Resource Files]
+	2) HomeController.en.resx, HomeController.es.resx, HomeController.de.resx,...
+
+
+	Resources
+		Views
+			Home
+				Index.en.resx
+				Index.es.resx	
+				Index.hi.resx
+			Shared
+				_Layout.en.resx
+				_Layout.es.resx	
+				_Layout.hi.resx
+			Controllers
+				HomeController.es.resx
+				HomeController.en.resx
+				HomeController.hi.resx
+		Areas
+			ProductsManager
+				Views
+					Home
+						Index.en.resx
+						Index.es.resx	
+						Index.hi.resx
+
+Authentication and Authorization - 
+
+	Authentication - Checking the Identity of the User
+			For Example - Credentials [UserName and Password] [Identity Framework]
+				      Digital Authentication
+				      Biometrics
+				      2FA/MFA
+				      OAuth [Outlook/Hotmail]
+	Authorization - Granting or Revoking the permissions from the Logged in User [Security Trimming] for secured resources of your application
+			Role/User
+
+Social Networking Authentication - 
+	1) Register your application with social network auth provider
+	2) OAuth provider will give some Id and Secret
+	3) Register the Id and Secret in your application
+	4) Use Google OAuth Library for .NET Core using which you can implement Authentication and Authorization process in your application
+
+
+
+
+
+
+
+
+
+
 
 
 
